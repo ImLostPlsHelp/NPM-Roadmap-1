@@ -1,26 +1,14 @@
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+// import javascriptLogo from './javascript.svg'
+// import viteLogo from '/vite.svg'
+// import { setupCounter } from './counter.js'
 import dayjs from 'dayjs'
 
 document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-    <p>${dayjs().format("DD/MM/YYYY")}</p>
+  <div class="date-container">
+    <h1>${dayjs().format("HH:mm:ss")}</h1>
+    <p>${dayjs().format("DD MMMM YYYY")}</p>
   </div>
 `
 
-setupCounter(document.querySelector('#counter'))
+// setupCounter(document.querySelector('#counter'))
